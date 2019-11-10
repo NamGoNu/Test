@@ -16,8 +16,18 @@ public class Index {
 		String major = null;
 		System.out.print("이름을 입력하세요 : ");
 		name = s.next();
-		System.out.print("나이를 입력하세요 : ");
-		age = s.nextInt();
+		
+		while(true) {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("나이를 입력하세요 : ");
+			try {
+				age = sc.nextInt();
+				break;
+			}catch(Exception e) {
+				System.out.println("숫자만 입력하세요 ");
+				continue;
+			}
+		}
 		System.out.print("주소를 입력하세요 : ");
 		address = s.next();
 		System.out.print("학번을 입력하세요(1000보다 작아야합니다) : ");
@@ -44,8 +54,17 @@ public class Index {
 		String subject = null;
 		System.out.print("이름을 입력하세요 : ");
 		name = s.next();
-		System.out.print("나이를 입력하세요 : ");
-		age = s.nextInt();
+		while(true) {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("나이를 입력하세요 : ");
+			try {
+				age = sc.nextInt();
+				break;
+			}catch(Exception e) {
+				System.out.println("숫자만 입력하세요 ");
+				continue;
+			}
+		}
 		System.out.print("주소를 입력하세요 : ");
 		address = s.next();
 		System.out.print("교번을 입력하세요(1000이상이어야 합니다) : ");
